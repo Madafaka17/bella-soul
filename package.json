@@ -1,0 +1,23 @@
+{
+  "name": "bella-soul-next",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Tienda bella.soul2024 (Next.js)",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "db:setup": "node scripts/setup-db.mjs"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "jose": "^5.9.6",
+    "mysql2": "^3.11.5",
+    "next": "^15.5.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
+}
