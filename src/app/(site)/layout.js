@@ -3,7 +3,7 @@ import { PromoBar, SearchBar, MobileNav, TrustBanner, Footer, WhatsAppFloat, Pro
 import Navbar from '@/components/site/Navbar';
 
 export const metadata = {
-  title: { default: 'bella.soul2024 — Moda Femenina para Cada Ocasión', template: '%s' },
+  title: { default: 'bella.soul', template: '%s' },
   description:
     'bella.soul2024 — Moda femenina moderna para cada ocasión. Vestidos, blusas, tops y prendas seleccionadas con estilo, calidad y dedicación.',
   keywords: 'moda femenina, vestidos, blusas, tops, ropa mujer, bella soul 2024',

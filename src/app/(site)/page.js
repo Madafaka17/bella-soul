@@ -4,7 +4,7 @@ import { tarifas, whatsappLink, whatsappNumero } from '@/lib/tienda';
 import { formatPrecio } from '@/lib/format';
 
 export const metadata = {
-  title: 'bella.soul2024 — Moda Femenina para Cada Ocasión',
+  title: 'bella.soul',
   description:
     'Descubre vestidos largos, blusas, tops y prendas femeninas modernas en bella.soul2024. Moda con estilo, comodidad y elegancia.',
 };
