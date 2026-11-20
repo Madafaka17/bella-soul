@@ -1507,7 +1507,7 @@ ul { list-style: none; }
 
 .form-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--space-md);
 }
 
@@ -1515,6 +1515,7 @@ ul { list-style: none; }
   display: flex;
   flex-direction: column;
   gap: 6px;
+  min-width: 0;
 }
 
 .form-group.full {
@@ -1529,6 +1530,8 @@ ul { list-style: none; }
 }
 
 .form-input {
+  width: 100%;
+  min-width: 0;
   padding: 0.75rem 1rem;
   border: 1.5px solid var(--color-beige-d);
   border-radius: var(--radius-md);
@@ -3210,7 +3213,7 @@ textarea.admin-form-input {
   }
 
   .form-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .values-grid {
