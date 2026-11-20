@@ -22,19 +22,17 @@ export default async function MiCuenta() {
 
   return (
     <>
-      <div className="breadcrumb">
+      <section className="account-section section" style={{ paddingTop: 'calc(var(--nav-height) + var(--promo-height) + var(--space-3xl))', minHeight: '100vh' }}>
         <div className="container">
-          <a href="/">Inicio</a>
-          <span className="separator">&gt;</span>
-          <span className="current">Mi Cuenta</span>
-        </div>
-      </div>
+          <div className="breadcrumb">
+            <a href="/">Inicio</a>
+            <span className="sep">/</span>
+            <span className="current">Mi cuenta</span>
+          </div>
 
-      <section className="account-section section">
-        <div className="container">
           <Alertas estilo={{ marginBottom: 'var(--space-lg)' }} />
 
-          <div className="account-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: 'var(--space-md)' }}>
+          <div className="account-header">
             <h1>Bienvenida, {cliente.nombres} {cliente.apellidos}</h1>
             <a href="/logout" className="btn btn-sm btn-outline"><i className="fas fa-sign-out-alt"></i> Cerrar sesión</a>
           </div>
@@ -70,8 +68,10 @@ export default async function MiCuenta() {
                             <td>{formatPrecio(p.total)}</td>
                             <td><span className={`status-badge status-${p.estado}`}>{p.estado}</span></td>
                             <td>
-                              <a href={`/pago/confirmacion/${p.id}`} className="btn btn-sm">Ver</a>{' '}
-                              <a href={`/boleta/${p.id}`} className="btn btn-sm" target="_blank">Boleta</a>
+                              <div className="table-actions">
+                                <a href={`/pago/confirmacion/${p.id}`} className="btn btn-sm btn-outline">Ver</a>
+                                <a href={`/boleta/${p.id}`} className="btn btn-sm btn-outline" target="_blank">Boleta</a>
+                              </div>
                             </td>
                           </tr>
                         ))}
@@ -85,37 +85,33 @@ export default async function MiCuenta() {
 
               <div id="tab-datos" className="tab-panel">
                 <form method="POST" action="/api/cuenta" className="account-form">
-                  <div className="form-row">
+                  <div className="form-grid">
                     <div className="form-group">
-                      <label htmlFor="nombres">Nombres</label>
-                      <input type="text" id="nombres" name="nombres" className="form-control" defaultValue={cliente.nombres} required />
+                      <label htmlFor="nombres" className="form-label">Nombres</label>
+                      <input type="text" id="nombres" name="nombres" className="form-input" defaultValue={cliente.nombres} required />
                     </div>
                     <div className="form-group">
-                      <label htmlFor="apellidos">Apellidos</label>
-                      <input type="text" id="apellidos" name="apellidos" className="form-control" defaultValue={cliente.apellidos} required />
-                    </div>
-                  </div>
-                  <div className="form-row">
-                    <div className="form-group">
-                      <label htmlFor="telefono">Teléfono</label>
-                      <input type="text" id="telefono" name="telefono" className="form-control" defaultValue={cliente.telefono || ''} />
+                      <label htmlFor="apellidos" className="form-label">Apellidos</label>
+                      <input type="text" id="apellidos" name="apellidos" className="form-input" defaultValue={cliente.apellidos} required />
                     </div>
                     <div className="form-group">
-                      <label htmlFor="direccion">Dirección</label>
-                      <input type="text" id="direccion" name="direccion" className="form-control" defaultValue={cliente.direccion || ''} />
-                    </div>
-                  </div>
-                  <div className="form-row">
-                    <div className="form-group">
-                      <label htmlFor="dni">DNI</label>
-                      <input type="text" id="dni" name="dni" className="form-control" defaultValue={cliente.dni || ''} maxLength={8} />
+                      <label htmlFor="telefono" className="form-label">Teléfono</label>
+                      <input type="text" id="telefono" name="telefono" className="form-input" defaultValue={cliente.telefono || ''} />
                     </div>
                     <div className="form-group">
-                      <label htmlFor="password">Nueva Contraseña (opcional)</label>
-                      <input type="password" id="password" name="password" className="form-control" placeholder="Dejar en blanco para mantener" />
+                      <label htmlFor="direccion" className="form-label">Dirección</label>
+                      <input type="text" id="direccion" name="direccion" className="form-input" defaultValue={cliente.direccion || ''} />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="dni" className="form-label">DNI</label>
+                      <input type="text" id="dni" name="dni" className="form-input" defaultValue={cliente.dni || ''} maxLength={8} />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="password" className="form-label">Nueva contraseña (opcional)</label>
+                      <input type="password" id="password" name="password" className="form-input" placeholder="Dejar en blanco para mantener" />
                     </div>
                   </div>
-                  <button type="submit" className="btn btn-primary">Guardar Cambios</button>
+                  <button type="submit" className="btn btn-primary"><i className="fas fa-save"></i> Guardar cambios</button>
                 </form>
               </div>
 
@@ -137,7 +133,7 @@ export default async function MiCuenta() {
                             <td>{p.numero_pedido}</td>
                             <td>{fechaCorta(p.created_at)}</td>
                             <td>{formatPrecio(p.total)}</td>
-                            <td><a href={`/boleta/${p.id}`} className="btn btn-sm" target="_blank">Ver boleta</a></td>
+                            <td><a href={`/boleta/${p.id}`} className="btn btn-sm btn-outline" target="_blank">Ver boleta</a></td>
                           </tr>
                         ))}
                       </tbody>
