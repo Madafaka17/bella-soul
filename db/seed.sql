@@ -40,8 +40,8 @@ INSERT INTO `configuracion` (`id`, `clave`, `valor`, `created_at`, `updated_at`)
 INSERT INTO `configuracion` (`id`, `clave`, `valor`, `created_at`, `updated_at`) VALUES (9,'costo_envio_provincia','15','2026-07-18 23:41:47','2026-07-18 23:41:47');
 INSERT INTO `configuracion` (`id`, `clave`, `valor`, `created_at`, `updated_at`) VALUES (10,'envio_gratis_minimo','150','2026-07-18 23:41:47','2026-07-18 23:41:47');
 INSERT INTO `configuracion` (`id`, `clave`, `valor`, `created_at`, `updated_at`) VALUES (11,'yape_nombre','Bella Soul','2026-07-18 23:41:47','2026-07-18 23:41:47');
-INSERT INTO `configuracion` (`id`, `clave`, `valor`, `created_at`, `updated_at`) VALUES (12,'yape_numero','999999999','2026-07-18 23:41:47','2026-07-18 23:41:47');
+INSERT INTO `configuracion` (`id`, `clave`, `valor`, `created_at`, `updated_at`) VALUES (12,'yape_numero','944888664','2026-07-18 23:41:47','2026-07-18 23:41:47');
 INSERT INTO `configuracion` (`id`, `clave`, `valor`, `created_at`, `updated_at`) VALUES (13,'plin_nombre','Bella Soul','2026-07-18 23:41:47','2026-07-18 23:41:47');
-INSERT INTO `configuracion` (`id`, `clave`, `valor`, `created_at`, `updated_at`) VALUES (14,'plin_numero','999999999','2026-07-18 23:41:47','2026-07-18 23:41:47');
+INSERT INTO `configuracion` (`id`, `clave`, `valor`, `created_at`, `updated_at`) VALUES (14,'plin_numero','944888664','2026-07-18 23:41:47','2026-07-18 23:41:47');
 INSERT INTO `configuracion` (`id`, `clave`, `valor`, `created_at`, `updated_at`) VALUES (15,'bcp_cuenta','123-4567890-0-00','2026-07-18 23:41:47','2026-07-18 23:41:47');
 INSERT INTO `configuracion` (`id`, `clave`, `valor`, `created_at`, `updated_at`) VALUES (16,'bcp_cci','000-123-4567890-0-00','2026-07-18 23:41:47','2026-07-18 23:41:47');
