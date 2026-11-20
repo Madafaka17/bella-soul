@@ -555,7 +555,7 @@ function whatsappProducto(nombre, talla, color, cantidad) {
   const c = color   || 'No especificado';
   const q = cantidad || 1;
   const msg = `Hola, estoy interesada en comprar en bella.soul2024.\nProducto: ${nombre}\nTalla: ${t}\nColor: ${c}\nCantidad: ${q}\n¿Está disponible?`;
-  const url = 'https://wa.me/51999999999?text=' + encodeURIComponent(msg);
+  const url = 'https://wa.me/51944888664?text=' + encodeURIComponent(msg);
   window.open(url, '_blank');
 }
 
